@@ -2,6 +2,33 @@
 
 Not ready for prime time.
 
+`rdoc-linter` is a Ruby console application that checks RDoc-generated HTML files.
+
+Its main purpose is to check the files at https://docs.ruby-lang.org/en,
+but it may find other uses as well.
+
+The first check to be implemented is:
+
+- Heading jump: An HTML heading that is more than one level different
+  from its immediately preceding or following heading.
+  `<h3>` may be preceded or followed by `<h2>`, `<h4>` or another `<h3>`,
+  but not by an `<h1>`, `<h5>`, or `<h6>`.
+
+The next is to be:
+
+- Broken link: a link to a non-existent page, or a link having a fragment
+  that has no target on the page.
+
+Later possibilities:
+
+- Duplicate ids on a page.
+- Empty href.
+- Orphaned page: one that is not the target of any links.
+
+## Usage
+
+To be supplied.
+
 ## Installation
 
 ```bash
